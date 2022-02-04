@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let screenLog = document.querySelector('#screen-log');
+    document.addEventListener('mousemove', logKey);
+
+    function logKey(e) {
+    screenLog.innerText = `
+    Screen X/Y: ${e.screenX}, ${e.screenY}
+    Client X/Y: ${e.clientX}, ${e.clientY}`;
+}
+</script>
+<body>
+    <p>위치를 보려면 마우스를 이동하십시오..</p>
+    <p id="screen-log"></p>
+</body>
+</html>

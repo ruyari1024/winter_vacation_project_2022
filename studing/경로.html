@@ -16,10 +16,12 @@
     var ctx = canvas.getContext('2d');
 
     ctx.beginPath();
-    ctx.moveTo(55, 50);
-    ctx.lineTo(55, 70);
-    ctx.lineTo(120, 15);
-    ctx.fill();
+    ctx.moveTo(1, 1);
+    ctx.lineTo(148, 148);
+    ctx.lineTo(148, 1);
+    // ctx.fill();
+    ctx.closePath()
+    ctx.stroke()
   }
 }
 </script>
