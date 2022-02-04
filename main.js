@@ -1,28 +1,31 @@
-let canvas = document.getElementsByClassName('canvas')
-let drag = false;
-const ctx = canvas.getContext('2d');
 
-document.ondrag = function (event) {
-    document.getElementById("demo").innerHTML
-                = "Element is being dragged";
-};
+let screenLog = document.querySelector('#canvas');
+    document.addEventListener('mousemove, mouse', logKey);
 
-document.onclick = function (event) {
-    document.getElementById("demo").innerHTML
-            = "Element is being clicked!";
-};
-ctx.lineWidth = 10;
+    
 
-// Wall
-ctx.strokeRect(75, 140, 150, 110);
+    function logKey(e) {
 
-// Door
-ctx.fillRect(130, 190, 40, 60);
+        let Text = document.querySelector('#location')
+        Text.innerText = `
+        Screen X/Y: ${e.screenX}, ${e.screenY}
+        Client X/Y: ${e.offsetX}, ${e.offsetY}`;
+        if(){
 
-// Roof
-ctx.beginPath();
-ctx.moveTo(50, 140);
-ctx.lineTo(150, 60);
-ctx.lineTo(250, 140);
-ctx.closePath();
-ctx.stroke();
+        }
+    }//자기 영역 기준.
+
+    function draw() {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+        var ctx = canvas.getContext('2d')
+        
+        ctx.beginPath();
+        ctx.moveTo(1, 1);
+        ctx.lineTo(148, 148);
+        ctx.lineTo(148, 1);
+        // ctx.fill();
+        ctx.closePath()
+        ctx.stroke()
+        }
+    }
