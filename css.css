@@ -1,7 +1,7 @@
 *{margin: 0;padding: 0;text-decoration: none;list-style: none;}
 header{text-align: center;font-size: 30px; font-weight: bold;color: rgb(219, 114, 158);margin-top: 20px;}
 canvas{
-    width: 70vw;height: 70vh;
+    width: 800px;height: 800px;
     /* background: #aaa; */
     border: 3px solid #aaa;
     position: relative;

@@ -1,31 +1,40 @@
 
-let screenLog = document.querySelector('#canvas');
-    document.addEventListener('mousemove, mouse', logKey);
+let screenLog = document.querySelector('#canvas')
+    document.addEventListener('mousemove', logKey);
 
     
 
     function logKey(e) {
-
+        let canvas = document.querySelector('#canvas')
         let Text = document.querySelector('#location')
-        Text.innerText = `
-        Screen X/Y: ${e.screenX}, ${e.screenY}
-        Client X/Y: ${e.offsetX}, ${e.offsetY}`;
-        if(){
-
-        }
-    }//자기 영역 기준.
-
-    function draw() {
-        var canvas = document.getElementById('canvas');
+        Text.innerHTML = `
+    마우스 좌표 X/Y: ${e.offsetX}, ${e.offsetY}
+        `;
+    }
+    
+    let pen = false;//자기 영역 기준.
+    document.addEventListener('mousedown', ()=>(pen = true));
+    document.addEventListener('mouseup', () => (pen = false));
+    document.addEventListener('mousemove', draw)
+    
+    function draw(e) {
+        
+        if(pen == false){
+            return 0;
+        }else if(pen == true){
+        const canvas = document.getElementById('canvas');
         if (canvas.getContext) {
-        var ctx = canvas.getContext('2d')
+        const ctx = canvas.getContext('2d')
+        let x = e.clientX
+        let y = e.clientY
         
         ctx.beginPath();
-        ctx.moveTo(1, 1);
-        ctx.lineTo(148, 148);
-        ctx.lineTo(148, 1);
-        // ctx.fill();
-        ctx.closePath()
-        ctx.stroke()
+        ctx.lineWidth = 10;
+        ctx.lineCap = "round"
+        ctx.moveTo(x, y);
+        ctx.lineTo(x, y);
+        
+        ctx.stroke();
         }
+    }
     }
