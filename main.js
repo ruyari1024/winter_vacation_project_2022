@@ -29,7 +29,7 @@ let screenLog = document.querySelector('#canvas')
         let y = e.offsetY
         
         ctx.beginPath();
-        ctx.lineWidth = 10;
+        ctx.lineWidth = 5;
         ctx.lineCap = "round"
         ctx.moveTo(x, y);
         ctx.lineTo(x, y);
