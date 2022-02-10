@@ -25,8 +25,8 @@ let screenLog = document.querySelector('#canvas')
         const canvas = document.getElementById('canvas');
         if (canvas.getContext) {
         const ctx = canvas.getContext('2d')
-        let x = e.clientX
-        let y = e.clientY
+        let x = e.offsetX
+        let y = e.offsetY
         
         ctx.beginPath();
         ctx.lineWidth = 10;
