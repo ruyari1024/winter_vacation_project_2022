@@ -4,18 +4,10 @@ canvas{
     
     /* background: #aaa; */
     border: 3px solid #aaa;
-    position: relative;
-    margin-top: 30px;
-}
-div{
-    background: #aaa;
-    width: 100px;
-    height: 100px;
+    background-color: rgb(255, 255, 255);
 }
 
-canvas:hover{
-    
-}
+
 .color>div{
     width: 40px;
     height: 40px;
@@ -24,3 +16,5 @@ canvas:hover{
 .color{
     right: 20px;
 }
+.click_none {width: 100vw; height: 100vh; pointer-events: none; position: absolute; top: 0px; background-color: rgba(1, 1, 1, 0.2);}
+
