@@ -8,7 +8,8 @@ let screenLog = document.querySelector('#canvas')
         let canvas = document.querySelector('#canvas')
         let Text = document.querySelector('#location')
         Text.innerHTML = `
-    마우스 좌표 X/Y: ${e.offsetX}, ${e.offsetY}
+    마우스 좌표 X/Y: ${e.offsetX}, ${e.offsetY}<br>
+    마우스 좌표2 X/Y: ${e.clientX}, ${e.clientY}
         `;
     }
     
@@ -16,10 +17,13 @@ let screenLog = document.querySelector('#canvas')
     document.addEventListener('mousedown', ()=>(pen = true));
     document.addEventListener('mouseup', () => (pen = false));
     document.addEventListener('mousemove', draw)
-    
+    let x1;
+    let y1;
     function draw(e) {
         
         if(pen == false){
+            x1 = e.offsetX;
+            y1 = e.offsetY;
             return 0;
         }else if(pen == true){
         const canvas = document.getElementById('canvas');
@@ -32,7 +36,12 @@ let screenLog = document.querySelector('#canvas')
         ctx.lineWidth = 5;
         ctx.lineCap = "round"
         ctx.moveTo(x, y);
+        ctx.lineTo(x1, y1)
         ctx.lineTo(x, y);
+        x1 = x;
+        y1 = y;
+        
+        
         
         ctx.stroke();
         }
