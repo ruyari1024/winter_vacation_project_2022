@@ -1,5 +1,5 @@
 
-let screenLog = document.querySelector('#canvas')
+    const screenLog = document.getElementById('canvas')
     document.addEventListener('mousemove', logKey);
 
     
@@ -14,11 +14,16 @@ let screenLog = document.querySelector('#canvas')
     }
     
     let pen = false;//자기 영역 기준.
-    document.addEventListener('mousedown', ()=>(pen = true));
-    document.addEventListener('mouseup', () => (pen = false));
-    document.addEventListener('mousemove', draw)
+    
+    screenLog.addEventListener('mousedown', ()=>(pen = true));
+    screenLog.addEventListener('mouseup', () => (pen = false));
+    screenLog.addEventListener('mousemove', draw)
     let x1;
     let y1;
+    let Color = 'rgba(0,0,0,1)'
+    function color(color){
+        Color = color
+    }
     function draw(e) {
         
         if(pen == false){
@@ -33,6 +38,7 @@ let screenLog = document.querySelector('#canvas')
         let y = e.offsetY
         
         ctx.beginPath();
+        ctx.strokeStyle = Color;
         ctx.lineWidth = 5;
         ctx.lineCap = "round"
         ctx.moveTo(x, y);
@@ -46,4 +52,10 @@ let screenLog = document.querySelector('#canvas')
         ctx.stroke();
         }
     }
+    }
+    
+    function color_want() {
+        Color = null
+        let color = prompt('원하는 색상의 코드를 입력해 주세요(ex: #ffffff) \n추천 링크 : https://www.toolo.kr/color-convert/')
+        Color = color
     }
