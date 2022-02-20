@@ -48,3 +48,7 @@ button{
 .con{
     border-radius: 50px;
 }
+.maca>img{
+    width: 50px;
+    height: 50px;
+}
