@@ -56,6 +56,6 @@
     
     function color_want() {
         Color = null
-        let color = prompt('원하는 색상의 코드를 입력해 주세요(ex: #ffffff) \n추천 링크 : https://www.toolo.kr/color-convert/')
+        let color = prompt('원하는 색상의 코드를 입력해 주세요(ex: #ffffff or rgba(red,green,blue,투명도(1이 최대))) \n추천 링크 : https://w ww.toolo.kr/color-convert/')
         Color = color
     }
