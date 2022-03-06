@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그림판 프로젝트</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    
+    
+</head>
+<body>
+        <header>그림판</header>    
+        <!-- <div clickable="true" draggable="true">안녕하세요!</div> -->
+        <div class="color" style="background-color: white; left: 20%;">
+            <div class="letter">컬러 팔레트<br><br></div>
+            <div onclick="color('rgba(0,0,255,1)')" id="blue" class="con"></div>
+            <div onclick="color('rgba(0,255,0,1)')"id="green"class="con"></div>
+            <div onclick="color('rgba(255,0,0,1)')" id="red"class="con"></div>
+            <div onclick="color('rgba(0,0,0,1)')" id="black"class="con"></div>
+            <button onclick="color_want()"><img src="./img/팔레트.png" alt="원하는 색 선택"></button>
+        </div>
+
+
+ 
+         <div class="tools">
+            <div class="letter">도구<br><br></div>
+            <div class="maca" onclick="tools(eraser)"><img src="./img/지우개.png" alt="마커"></div>
+        </div>
+    
+        <center>
+            <canvas id="canvas" width="600" height="600">
+            
+            </canvas>
+            <p id="location"></p>
+        </center>
+        
+        
+        
+    <!-- <div class="click"></div> -->
+    <p id="test"></p>
+    
+    
+    
+</body>
+<script src="./main.js"></script>
+</html>

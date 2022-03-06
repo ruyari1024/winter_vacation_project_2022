@@ -1,0 +1,24 @@
+div {
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    background: black;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all .5s ease;
+  }
+  
+  .pressed {
+    background: tomato;
+    transform: scale(1.2);
+  }
+  
+  body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    grid-gap: 1rem;
+    padding: 1rem;
+    height: 100vh;
+    background: skyblue;
+  }
