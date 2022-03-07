@@ -54,7 +54,7 @@
         if(macapen == true){
             ctx.beginPath();
             ctx.strokeStyle = Color;
-            ctx.lineWidth = 6;
+            ctx.lineWidth = scale;
             ctx.lineCap = "pixel"
             ctx.moveTo(xb, yb);
             ctx.lineTo(x-5, y-5);
@@ -78,11 +78,11 @@
             
         }else if(eraserpen == true){
 
-            ctx.clearRect(x, y, 5, 5)
+            ctx.clearRect(x, y, scale, scale)
         }else{
             ctx.beginPath();
             ctx.strokeStyle = Color;
-            ctx.lineWidth = 5;
+            ctx.lineWidth = scale;
             ctx.lineCap = "round"
             ctx.moveTo(x1, y1);
             // ctx.lineTo(x1, y1)
@@ -101,10 +101,14 @@
     let eraserpen = false
     function color_want() {
         Color = null
-        let color = prompt("원하는 색상을 입력해 주세요.r,g,b,a(투명도)")
+        let color = prompt("원하는 색상코드를 입력해 주세요.")
         Color = `rgba(${color})`
     }
     function tools(a){
         if(a == 'maca'){if(macapen ==true){macapen = false}else if(macapen == false){macapen = true}}
         if(a == 'eraser'){ macapen = false; if(eraserpen == true){eraserpen = false}else if (eraserpen == false){eraserpen = true}}
     }
+    let scale = 5;
+    document.querySelector(".pen_scale").addEventListener('click', () => {
+        scale = prompt("원하는 크기를 숫자로 적어주세요..(기본 설정값 : 5)")
+    });
