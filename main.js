@@ -77,19 +77,8 @@
             ctx.stroke();
             
         }else if(eraserpen == true){
-            ctx.beginPath();
-            ctx.strokeStyle = Color;
-            ctx.lineWidth = 5;
-            ctx.lineCap = "round"
-            ctx.moveTo(x1, y1);
-            // ctx.lineTo(x1, y1)
-            ctx.lineTo(x, y);
-            x1 = x;
-            y1 = y;
-            
-            
-            
-            ctx.stroke();
+
+            ctx.clearRect(x, y, 5, 5)
         }else{
             ctx.beginPath();
             ctx.strokeStyle = Color;
