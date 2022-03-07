@@ -26,17 +26,16 @@
  
          <div class="tools">
             <div class="letter">도구<br><br></div>
-            <div class="maca" onclick="maca()"><img src="./img/마커.png" alt="마커"></div>
+            <!-- <div class="maca" onclick="tools('maca')"><img src="./img/마커.png" alt="마커"></div> -->
+            <div class="eraser" id="eraser" onclick="tools('eraser')"><img src="./img/지우개.png" alt="지우개" width="50px" height="50px"></div>
         </div>
     
         <center>
-            <canvas id="canvas" width="600" height="600">
-            
-            </canvas>
+            <canvas id="canvas" width="500" height="500"></canvas>
             <p id="location"></p>
         </center>
         
-        
+        <input type="color" name="" id="">
         
     <!-- <div class="click"></div> -->
     <p id="test"></p>
