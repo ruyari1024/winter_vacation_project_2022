@@ -13,24 +13,30 @@
 <body>
         <header>그림판</header>    
         <!-- <div clickable="true" draggable="true">안녕하세요!</div> -->
-        <div class="color" style="background-color: white; left: 20%;">
-            <div class="letter">컬러 팔레트<br><br></div>
-            <div onclick="color('rgba(0,0,255,1)')" id="blue" class="con"></div>
-            <div onclick="color('rgba(0,255,0,1)')"id="green"class="con"></div>
-            <div onclick="color('rgba(255,0,0,1)')" id="red"class="con"></div>
-            <div onclick="color('rgba(0,0,0,1)')" id="black"class="con"></div>
-            <button onclick="color_want()"><img src="./img/팔레트.png" alt="원하는 색 선택"></button>
-            <div class="color_check"><input type="color" name="" id="" style="width: 40px;height: 40px;"></div>
-            
+        <div class="container">
+            <div class="tools c">
+                <div class="letter">도구<br><br></div>
+                <!-- <div class="maca" onclick="tools('maca')"><img src="./img/마커.png" alt="마커"></div> -->
+                <div class="eraser" id="eraser" onclick="tools('eraser')" style="width: 50px; height: 50px;">
+                    <img src="./img/지우개.png" alt="지우개" width="50px" height="50px">
+                </div>
+                <div class="pen_scale"><img src="./img/펜 두께 설정.png" alt="펜 두꼐 설정" width="50" height="50"></div>
+            </div>
+            <div class="color c" style="background-color: white; left: 20%;">
+                <div class="letter">색상<br><br></div>
+                <div onclick="color('rgba(0,0,255,1)')" id="blue" class="con"></div>
+                <div onclick="color('rgba(0,255,0,1)')"id="green"class="con"></div>
+                <div onclick="color('rgba(255,0,0,1)')" id="red"class="con"></div>
+                <div onclick="color('rgba(0,0,0,1)')" id="black"class="con"></div>
+                <button onclick="color_want()"><img src="./img/팔레트.png" alt="원하는 색 선택"></button>
+                <div class="color_check"><input type="color" name="" id="" style="width: 40px;height: 40px;"></div>            
+            </div>
+                       
         </div>
         
         
-        <div class="tools">
-            <div class="letter">도구<br><br></div>
-            <!-- <div class="maca" onclick="tools('maca')"><img src="./img/마커.png" alt="마커"></div> -->
-            <div class="eraser" id="eraser" onclick="tools('eraser')"><img src="./img/지우개.png" alt="지우개" width="50px" height="50px"></div>
-            <div class="pen_scale"><img src="./img/펜 두께 설정.png" alt="펜 두꼐 설정" width="50" height="50"></div>
-        </div>
+        
+        
     
         <center>
             <canvas id="canvas" width="500" height="500"></canvas>
