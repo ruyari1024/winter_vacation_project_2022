@@ -52,3 +52,39 @@ button{
     width: 50px;
     height: 50px;
 }
+.waring{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(1, 1, 1, 0.5);
+    position: absolute;
+    top: 0;
+    
+}
+.waring>div>p{
+    text-align: center;
+    font-size: large;
+}
+.waring>.le{
+    width: 500px;
+    height: 500px;
+    background: #ffffff;
+    text-align: center;
+    margin: 0 auto ;
+    margin-top: 12%;
+    
+}
+.aa{
+    vertical-align: bottom;
+    margin-top: 70%;
+    color: #aaa;
+}
+.le>img{
+    position: absolute;
+    text-align: right;
+    width: 30px;
+    height: 30px;
+    vertical-align:top;
+    right: 35.5%;
+    top: 23vh;
+    
+}

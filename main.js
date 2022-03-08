@@ -112,3 +112,7 @@
     document.querySelector(".pen_scale").addEventListener('click', () => {
         scale = prompt("원하는 크기를 숫자로 적어주세요..(기본 설정값 : 5)")
     });
+    document.querySelector("#x").addEventListener('click', () => {
+        let first_screen = document.querySelector(".waring")
+        first_screen.remove();
+    })
