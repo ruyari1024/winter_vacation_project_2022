@@ -114,5 +114,5 @@
     });
     document.querySelector("#x").addEventListener('click', () => {
         let first_screen = document.querySelector(".waring")
-        first_screen.remove();
+        first_screen.remove()
     })

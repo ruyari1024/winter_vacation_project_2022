@@ -80,7 +80,7 @@ button{
 }
 .le>img{
     position: absolute;
-    text-align: right;
+    /* text-align: right; */
     width: 30px;
     height: 30px;
     vertical-align:top;
